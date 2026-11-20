@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="primaryGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+    <linearGradient id="forestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#CBD5E1" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#CBD5E1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#E2E8F0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glowCircle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16A34A" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#16A34A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Ambient Glow -->
+  <circle cx="325" cy="240" r="210" fill="url(#glowCircle)"/>
+  <circle cx="480" cy="120" r="80" fill="#22C55E" fill-opacity="0.06"/>
+  <circle cx="160" cy="340" r="100" fill="#064E3B" fill-opacity="0.05"/>
+
+  <!-- Road & Motion Horizon -->
+  <path d="M 50 420 Q 325 415 600 420" stroke="url(#roadGrad)" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <line x1="120" y1="435" x2="220" y2="435" stroke="#94A3B8" stroke-width="3" stroke-dasharray="16 12"/>
+  <line x1="260" y1="435" x2="400" y2="435" stroke="#16A34A" stroke-width="3" stroke-dasharray="24 16"/>
+  <line x1="440" y1="435" x2="560" y2="435" stroke="#94A3B8" stroke-width="3" stroke-dasharray="16 12"/>
+
+  <!-- Telematics Floating HUD Badges -->
+  <!-- Badge 1: 100% Electric & IoT Active -->
+  <g transform="translate(420, 60)" filter="url(#softGlow)">
+    <rect width="180" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="28" cy="26" r="14" fill="#DCFCE7"/>
+    <path d="M28 17 L22 26 L27 26 L25 35 L34 24 L29 24 Z" fill="#16A34A"/>
+    <text x="50" y="24" font-family="'Manrope', sans-serif" font-weight="800" font-size="12" fill="#0F172A">100% Electric</text>
+    <text x="50" y="38" font-family="'Manrope', sans-serif" font-weight="600" font-size="10" fill="#16A34A">IoT Telematics Active</text>
+  </g>
+
+  <!-- Badge 2: Fuel Savings -->
+  <g transform="translate(60, 110)" filter="url(#softGlow)">
+    <rect width="175" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="26" cy="26" r="14" fill="#FEF3C7"/>
+    <text x="21" y="31" font-family="'Manrope', sans-serif" font-weight="900" font-size="14" fill="#D97706">₹</text>
+    <text x="48" y="24" font-family="'Manrope', sans-serif" font-weight="800" font-size="12" fill="#0F172A">₹0 Fuel Cost</text>
+    <text x="48" y="38" font-family="'Manrope', sans-serif" font-weight="600" font-size="10" fill="#D97706">Save ₹4,500+/month</text>
+  </g>
+
+  <!-- Badge 3: Swappable Battery Status -->
+  <g transform="translate(430, 360)" filter="url(#softGlow)">
+    <rect width="170" height="46" rx="12" fill="#064E3B"/>
+    <circle cx="24" cy="23" r="8" fill="#22C55E"/>
+    <text x="40" y="21" font-family="'Manrope', sans-serif" font-weight="700" font-size="11" fill="#FFFFFF">Dual Battery Pack</text>
+    <text x="40" y="34" font-family="'Manrope', sans-serif" font-weight="600" font-size="10" fill="#86EFAC">150 km Combined Range</text>
+  </g>
+
+  <!-- SCOOTER & RIDER MAIN GRAPHIC -->
+  <g transform="translate(110, 80)">
+    <!-- Back Wheel -->
+    <circle cx="100" cy="300" r="46" fill="#1E293B" stroke="#0F172A" stroke-width="8"/>
+    <circle cx="100" cy="300" r="34" fill="#334155"/>
+    <circle cx="100" cy="300" r="16" fill="#94A3B8"/>
+    <circle cx="100" cy="300" r="8" fill="#F8FAFC"/>
+    <!-- Green Rim Accent -->
+    <circle cx="100" cy="300" r="28" stroke="#22C55E" stroke-width="3" stroke-dasharray="14 12" fill="none"/>
+
+    <!-- Front Wheel -->
+    <circle cx="340" cy="300" r="46" fill="#1E293B" stroke="#0F172A" stroke-width="8"/>
+    <circle cx="340" cy="300" r="34" fill="#334155"/>
+    <circle cx="340" cy="300" r="16" fill="#94A3B8"/>
+    <circle cx="340" cy="300" r="8" fill="#F8FAFC"/>
+    <!-- Green Rim Accent -->
+    <circle cx="340" cy="300" r="28" stroke="#22C55E" stroke-width="3" stroke-dasharray="14 12" fill="none"/>
+
+    <!-- Scooter Swingarm & Underbody Chassis -->
+    <path d="M100 300 L180 295 L220 285 L280 295 L340 300" stroke="#0F172A" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M150 280 L250 280" stroke="#16A34A" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Floorboard / Battery Enclosure Compartment -->
+    <rect x="160" y="250" width="90" height="32" rx="8" fill="#064E3B"/>
+    <rect x="165" y="254" width="80" height="8" rx="3" fill="#16A34A"/>
+    <text x="175" y="276" font-family="'Manrope', sans-serif" font-weight="900" font-size="8" fill="#86EFAC">SMART BMS EV</text>
+
+    <!-- Main Front Apron & Bodywork (White & Electric Green) -->
+    <path d="M250 270 L300 220 L315 150 L285 145 L255 200 L210 230 Z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+    <path d="M290 220 L315 150 L295 145 L270 210 Z" fill="url(#primaryGreen)"/>
+
+    <!-- Front Mudguard -->
+    <path d="M310 270 Q 340 250 370 280" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M320 268 Q 340 253 360 273" stroke="#16A34A" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <!-- Telescopic Suspension -->
+    <line x1="320" y1="210" x2="340" y2="300" stroke="#64748B" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Rear Body Fairing -->
+    <path d="M100 270 L170 250 L210 230 L170 220 L110 230 Z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+    <path d="M120 255 L180 240 L160 230 L115 240 Z" fill="url(#primaryGreen)"/>
+
+    <!-- Heavy-Duty Commercial Rear Carrier Rack -->
+    <path d="M75 220 L130 220 L150 235" stroke="#0F172A" stroke-width="6" stroke-linecap="round" fill="none"/>
+    
+    <!-- HENSHE Branded Last-Mile Delivery Box / Bag -->
+    <rect x="35" y="140" width="85" height="82" rx="12" fill="#064E3B" stroke="#16A34A" stroke-width="2.5" filter="url(#softGlow)"/>
+    <rect x="42" y="146" width="71" height="10" rx="4" fill="#16A34A"/>
+    <!-- Brand on Delivery Box -->
+    <text x="47" y="185" font-family="'Manrope', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF" letter-spacing="1">HEN<tspan fill="#22C55E">SHE</tspan></text>
+    <text x="50" y="202" font-family="'Manrope', sans-serif" font-weight="700" font-size="8" fill="#86EFAC">DELIVERY PARTNER</text>
+    <!-- Reflective Safety Strips -->
+    <line x1="38" y1="214" x2="117" y2="214" stroke="#FACC15" stroke-width="3"/>
+
+    <!-- Dual Ergonomic Seat -->
+    <path d="M125 210 Q 170 205 215 215 L210 230 L135 225 Z" fill="#0F172A" rx="6"/>
+
+    <!-- Handlebar & Digital Instrument Cluster -->
+    <line x1="285" y1="145" x2="270" y2="105" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+    <rect x="250" y="95" width="36" height="18" rx="5" fill="#022C22" stroke="#22C55E" stroke-width="1.5"/>
+    <text x="256" y="108" font-family="monospace" font-weight="bold" font-size="9" fill="#22C55E">54 km/h</text>
+    <!-- Handle Grips -->
+    <line x1="240" y1="105" x2="295" y2="102" stroke="#0F172A" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- LED Headlight Beam -->
+    <polygon points="315,150 430,120 440,190" fill="#22C55E" fill-opacity="0.12"/>
+    <circle cx="316" cy="155" r="7" fill="#F8FAFC"/>
+    <circle cx="316" cy="155" r="4" fill="#38BDF8"/>
+
+    <!-- DELIVERY RIDER (Indian Professional in Uniform & Certified Helmet) -->
+    <!-- Torso / Jacket (Forest Green & High-Viz Accents) -->
+    <path d="M170 120 L210 115 L230 180 L180 190 Z" fill="#064E3B" stroke="#022C22" stroke-width="2"/>
+    <!-- High-Viz Safety Vest / Strip -->
+    <path d="M185 118 L200 116 L215 175 L200 178 Z" fill="#22C55E"/>
+    <text x="188" y="150" font-family="'Manrope', sans-serif" font-weight="800" font-size="7" fill="#FFFFFF" transform="rotate(75 190 150)">HENSHE</text>
+
+    <!-- Arms Holding Handlebar -->
+    <path d="M195 125 L235 135 L260 108" stroke="#064E3B" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="260" cy="108" r="7" fill="#1E293B"/> <!-- Gloves -->
+
+    <!-- Legs & Riding Posture -->
+    <path d="M180 180 L205 220 L220 260" stroke="#1E293B" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Shoe on footboard -->
+    <rect x="210" y="255" width="28" height="12" rx="4" fill="#0F172A"/>
+
+    <!-- Head & Premium Smart Helmet -->
+    <circle cx="195" cy="78" r="24" fill="#0F172A"/>
+    <!-- Helmet Aerodynamic Shell with Electric Green Graphic -->
+    <path d="M180 75 Q 195 55 215 70 Q 220 90 205 98 Z" fill="#16A34A"/>
+    <!-- Tinted Visor with Reflection -->
+    <path d="M205 72 Q 222 75 220 86 Q 206 88 202 82 Z" fill="#38BDF8" fill-opacity="0.85"/>
+    <line x1="207" y1="75" x2="216" y2="83" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
