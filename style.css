@@ -1,0 +1,709 @@
+/* ==========================================================================
+   HENSHE EV Mobility Platform - Vibrant, Colorful & High-Impact Master Stylesheet
+   Typography: Outfit (Display) + Plus Jakarta Sans (Body) + Space Grotesk (Tech)
+   Aesthetics: Aurora Mesh Gradients, Floating Ambient Lighting, Glassmorphism
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  /* Vibrant Electric Brand Palette */
+  --primary: #10b981;
+  --primary-hover: #059669;
+  --primary-light: #34d399;
+  --primary-electric: #00f5a0;
+  --primary-glow: rgba(16, 185, 129, 0.4);
+
+  /* Colorful Neon & Accent Spectrum */
+  --accent-cyan: #00d2ff;
+  --accent-sky: #0ea5e9;
+  --accent-indigo: #6366f1;
+  --accent-purple: #8b5cf6;
+  --accent-amber: #f59e0b;
+  --accent-yellow: #facc15;
+  --accent-rose: #f43f5e;
+  --accent-teal: #14b8a6;
+
+  /* Deep Cosmic Shades */
+  --cosmos-black: #060913;
+  --cosmos-deep: #0a1122;
+  --cosmos-surface: #0f1c34;
+  --forest-dark: #022c22;
+  --forest-surface: #064e3b;
+
+  /* Typography */
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-tech: 'Space Grotesk', monospace;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-dark-bg: rgba(15, 23, 42, 0.75);
+  --glass-dark-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: #1e293b;
+  background-color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-family: var(--font-body);
+}
+
+/* ==========================================================================
+   Custom Scrollbar with Electric Gradient
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #10b981 0%, #06b6d4 50%, #6366f1 100%);
+  border-radius: 9999px;
+  border: 2px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #34d399 0%, #22d3ee 50%, #818cf8 100%);
+}
+
+/* ==========================================================================
+   Typography Hierarchy & Stylish Fonts
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+}
+
+.font-tech {
+  font-family: var(--font-tech);
+}
+
+/* Multi-Stop Vibrant Gradient Typography */
+.gradient-text-electric {
+  background: linear-gradient(135deg, #059669 0%, #10b981 30%, #00d2ff 80%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-aurora {
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 40%, #8b5cf6 85%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #00d2ff 0%, #06b6d4 50%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-glow-green {
+  text-shadow: 0 0 24px rgba(16, 185, 129, 0.45);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 24px rgba(6, 182, 212, 0.5);
+}
+
+/* ==========================================================================
+   Vibrant Backgrounds & Colorful Mesh Canvases
+   ========================================================================== */
+
+/* Top Announcement Gradient */
+.bg-announcement-bar {
+  background: linear-gradient(90deg, #022c22 0%, #064e3b 30%, #0c4a6e 70%, #1e1b4b 100%);
+}
+
+/* Colorful Hero Mesh Background */
+.bg-mesh-hero {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 88% 25%, rgba(6, 182, 212, 0.20) 0%, transparent 42%),
+    radial-gradient(circle at 50% 85%, rgba(139, 92, 246, 0.12) 0%, transparent 48%),
+    radial-gradient(circle at 95% 85%, rgba(245, 158, 11, 0.10) 0%, transparent 35%);
+  position: relative;
+}
+
+/* Ambient Floating Blur Orbs */
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+  transition: all 1s ease;
+}
+
+.ambient-orb-1 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(0, 245, 160, 0.45) 0%, rgba(16, 185, 129, 0.15) 70%, transparent 100%);
+  top: -60px;
+  left: -80px;
+  animation: orbDrift1 14s ease-in-out infinite alternate;
+}
+
+.ambient-orb-2 {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.40) 0%, rgba(59, 130, 246, 0.15) 70%, transparent 100%);
+  top: 10%;
+  right: -100px;
+  animation: orbDrift2 18s ease-in-out infinite alternate;
+}
+
+.ambient-orb-3 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, rgba(99, 102, 241, 0.12) 70%, transparent 100%);
+  bottom: 5%;
+  left: 30%;
+  animation: orbDrift3 16s ease-in-out infinite alternate;
+}
+
+.ambient-orb-gold {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.30) 0%, rgba(251, 191, 36, 0.10) 70%, transparent 100%);
+  bottom: 0;
+  right: 15%;
+  animation: orbDrift1 20s ease-in-out infinite alternate;
+}
+
+@keyframes orbDrift1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(40px, 30px) scale(1.08);
+  }
+
+  100% {
+    transform: translate(-30px, 50px) scale(0.95);
+  }
+}
+
+@keyframes orbDrift2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-50px, -40px) scale(1.12);
+  }
+
+  100% {
+    transform: translate(30px, 40px) scale(0.92);
+  }
+}
+
+@keyframes orbDrift3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+
+  100% {
+    transform: translate(-40px, -20px) scale(1.1);
+  }
+}
+
+/* Modern High-Tech Grid Pattern Overlay */
+.bg-tech-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-tech-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Colorful Energy Bar (Metrics Section) */
+.bg-energy-ribbon {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 35%, #f5f3ff 70%, #fffbeb 100%);
+  border-top: 1px solid rgba(16, 185, 129, 0.2);
+  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+  position: relative;
+}
+
+/* Colorful Sections: About, Ventures, Services */
+.bg-mesh-soft-emerald {
+  background:
+    radial-gradient(circle at 5% 30%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 95% 70%, rgba(14, 165, 233, 0.10) 0%, transparent 40%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.bg-mesh-ventures {
+  background:
+    radial-gradient(circle at 85% 10%, rgba(139, 92, 246, 0.14) 0%, transparent 50%),
+    radial-gradient(circle at 10% 50%, rgba(16, 185, 129, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 70% 90%, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.bg-mesh-services {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.12) 0%, transparent 40%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Cyber Deep Cosmos Section (Why Choose Us) */
+.bg-cyber-cosmos {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.22) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.20) 0%, transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(139, 92, 246, 0.18) 0%, transparent 45%),
+    linear-gradient(160deg, #060913 0%, #0a1122 50%, #031e17 100%);
+  position: relative;
+}
+
+/* Contact Section Colorful Mesh */
+.bg-mesh-contact {
+  background:
+    radial-gradient(circle at 90% 15%, rgba(16, 185, 129, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 10% 75%, rgba(6, 182, 212, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 60% 95%, rgba(245, 158, 11, 0.10) 0%, transparent 35%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* ==========================================
+   Header Glassmorphism & Rainbow Accent
+   ========================================== */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+}
+
+.glass-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #10b981 0%, #06b6d4 35%, #6366f1 70%, #f59e0b 100%);
+  opacity: 0.85;
+}
+
+/* Navigation active indicator with gradient */
+.nav-link {
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+.nav-link.active {
+  color: #059669;
+  font-weight: 700;
+}
+
+/* ==========================================
+   Cards & Glassmorphism Styling
+   ========================================== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+}
+
+.glass-card-dark {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Lift with Colorful Glow */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+}
+
+.hover-lift-emerald:hover {
+  box-shadow: 0 20px 35px -10px rgba(16, 185, 129, 0.22);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.hover-lift-cyan:hover {
+  box-shadow: 0 20px 35px -10px rgba(6, 182, 212, 0.22);
+  border-color: rgba(6, 182, 212, 0.5);
+}
+
+.hover-lift-purple:hover {
+  box-shadow: 0 20px 35px -10px rgba(139, 92, 246, 0.22);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.hover-lift-amber:hover {
+  box-shadow: 0 20px 35px -10px rgba(245, 158, 11, 0.22);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+/* ==========================================
+   Venture Signature Cards Styling
+   ========================================= */
+
+/* Venture 1: Emerald Light */
+.card-venture-ride {
+  background: linear-gradient(175deg, #ffffff 0%, #f0fdf4 100%);
+  border: 1.5px solid rgba(16, 185, 129, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-venture-ride::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #10b981 0%, #00f5a0 100%);
+}
+
+/* Venture 2: Cyber Capital Nebula (Featured) */
+.card-venture-capital {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(6, 182, 212, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(16, 185, 129, 0.20) 0%, transparent 45%),
+    linear-gradient(160deg, #060e22 0%, #0a1a36 45%, #022c22 100%);
+  border: 1.5px solid rgba(6, 182, 212, 0.45);
+  box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-venture-capital::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00d2ff 0%, #10b981 50%, #f59e0b 100%);
+}
+
+/* Venture 3: Royal Sapphire Enterprise */
+.card-venture-enterprise {
+  background: linear-gradient(175deg, #ffffff 0%, #f5f3ff 100%);
+  border: 1.5px solid rgba(139, 92, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-venture-enterprise::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8b5cf6 0%, #3b82f6 100%);
+}
+
+/* ==========================================
+   Buttons & Interactive Elements
+   ========================================== */
+
+/* Shimmer Light Sweep Effect on Buttons */
+.btn-electric {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 20px -4px rgba(16, 185, 129, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-electric:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px -4px rgba(16, 185, 129, 0.55);
+}
+
+.btn-electric::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+  transform: rotate(25deg) translateY(-100%);
+  transition: transform 0.75s ease-in-out;
+}
+
+.btn-electric:hover::after {
+  transform: rotate(25deg) translateY(100%);
+}
+
+/* Radiant Cyan CTA Button */
+.btn-cyan {
+  background: linear-gradient(135deg, #00d2ff 0%, #0284c7 100%);
+  color: #031427;
+  font-weight: 800;
+  box-shadow: 0 8px 20px -4px rgba(6, 182, 212, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-cyan:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #0369a1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px -4px rgba(6, 182, 212, 0.6);
+}
+
+/* Dark Glass CTA Button */
+.btn-dark-glass {
+  background: rgba(15, 23, 42, 0.92);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-dark-glass:hover {
+  background: #0f172a;
+  border-color: rgba(16, 185, 129, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Glowing Badges & Tags */
+.badge-electric {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #047857;
+}
+
+.badge-electric-dark {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.22) 0%, rgba(6, 182, 212, 0.22) 100%);
+  border: 1px solid rgba(0, 245, 160, 0.4);
+  color: #34d399;
+}
+
+.badge-gold-dark {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25) 0%, rgba(251, 191, 36, 0.15) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #fbbf24;
+}
+
+/* Colorful Icon Containers */
+.icon-box-emerald {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.icon-box-cyan {
+  background: linear-gradient(135deg, #cffafe 0%, #a5f3fc 100%);
+  color: #0369a1;
+  border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+.icon-box-purple {
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+  color: #6d28d9;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.icon-box-amber {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+/* ==========================================
+   Animations
+   ========================================== */
+@keyframes floatSlow {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(0.5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 245, 160, 0.7);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* ==========================================
+   Form Controls
+   ========================================== */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+/* Modal styling */
+.modal-backdrop {
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.8) 0%, rgba(2, 6, 23, 0.95) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: opacity 0.25s ease-out;
+}
+
+/* ==========================================
+   Image Showcase & Trending Visual Cards
+   ========================================== */
+.img-zoom-container {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  position: relative;
+}
+
+.img-zoom-container img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-zoom-container:hover img {
+  transform: scale(1.05);
+}
+
+.visual-overlay-gradient {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.75) 100%);
+}
+
+.culture-gradient-border {
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #ffffff, #f0fdf4) padding-box,
+              linear-gradient(135deg, #10b981 0%, #06b6d4 40%, #8b5cf6 75%, #f59e0b 100%) border-box;
+}
+
+.culture-gradient-border-dark {
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #0f172a, #0a1122) padding-box,
+              linear-gradient(135deg, #00f5a0 0%, #00d2ff 40%, #a855f7 75%, #fbbf24 100%) border-box;
+}
+
+/* Toast alert */
+.toast-notice {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Mobile responsive typography */
+@media (max-width: 640px) {
+  .hero-heading {
+    font-size: 2.35rem !important;
+    line-height: 1.15 !important;
+  }
+}
