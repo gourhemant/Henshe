@@ -1,0 +1,7 @@
+# Ignore archives and temporary folders
+website.zip
+New folder/
+henshe-website-v2/
+.system_generated/
+__pycache__/
+*.log

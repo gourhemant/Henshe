@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="c1-green-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+    <linearGradient id="c1-volt-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+    <linearGradient id="c1-dark-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+    <filter id="c1-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#16A34A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- LOGO MARK: KINETIC "H" EMBLEM -->
+  <g transform="translate(15, 10)">
+    <!-- Rounded Outer Shield Container -->
+    <rect x="0" y="0" width="70" height="70" rx="20" fill="url(#c1-dark-grad)" filter="url(#c1-shadow)"/>
+    <rect x="2" y="2" width="66" height="66" rx="18" fill="none" stroke="url(#c1-green-grad)" stroke-width="1.5" stroke-opacity="0.4"/>
+
+    <!-- Left Pillar of 'H' (Forward slanted clean pill) -->
+    <path d="M 21 21 C 21 18.2 23.2 16 26 16 C 28.8 16 31 18.2 31 21 L 31 49 C 31 51.8 28.8 54 26 54 C 23.2 54 21 51.8 21 49 Z" fill="url(#c1-green-grad)"/>
+
+    <!-- Right Pillar of 'H' -->
+    <path d="M 39 21 C 39 18.2 41.2 16 44 16 C 46.8 16 49 18.2 49 21 L 49 49 C 49 51.8 46.8 54 44 54 C 41.2 54 39 51.8 39 49 Z" fill="url(#c1-green-grad)"/>
+
+    <!-- Dynamic Lightning Crossbar connecting the H -->
+    <path d="M 27 34 L 43 25 L 37 36 L 46 36 L 27 50 L 32 38 Z" fill="url(#c1-volt-grad)"/>
+
+    <!-- Pulse Energy Dot -->
+    <circle cx="51" cy="19" r="2.5" fill="#4ADE80"/>
+  </g>
+
+  <!-- TYPOGRAPHY: BRAND NAME -->
+  <g transform="translate(102, 47)">
+    <text font-family="'Manrope', 'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="36" letter-spacing="2.5" fill="#0F172A">
+      HEN<tspan fill="#16A34A">SHE</tspan>
+    </text>
+  </g>
+
+  <!-- SUBTITLE / TAGLINE -->
+  <g transform="translate(104, 66)">
+    <text font-family="'Manrope', 'Inter', sans-serif" font-weight="800" font-size="10.5" letter-spacing="4" fill="#064E3B">
+      MOBILITY GROUP
+    </text>
+  </g>
+  <g transform="translate(262, 66)">
+    <circle cx="0" cy="-3.5" r="2" fill="#16A34A"/>
+    <text x="8" font-family="'Manrope', 'Inter', sans-serif" font-weight="700" font-size="9.5" letter-spacing="2" fill="#64748B">
+      EV ECOSYSTEM
+    </text>
+  </g>
+</svg>

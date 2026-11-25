@@ -1,0 +1,538 @@
+/* ==========================================================================
+   HENSHE EV Mobility Platform - Cyber Stealth Dark Master Stylesheet
+   Theme: Cyber Stealth (Deep Obsidian #060911, Neon Mint #00F5A0, Cyber Cyan #00D2FF)
+   Typography: Outfit (Display) + Plus Jakarta Sans (Body) + Space Grotesk (Tech)
+   Aesthetics: Futuristic Dark Glassmorphism, Neon Glow Accents, Precision HUD Grids
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  /* Cyber Stealth Signature Palette */
+  --obsidian: #060911;
+  --obsidian-deep: #030509;
+  --carbon-surface: #0b1322;
+  --carbon-card: #0f1c30;
+  --carbon-border: rgba(255, 255, 255, 0.08);
+  --carbon-border-glow: rgba(0, 245, 160, 0.25);
+
+  /* High-Tech Electric Accents */
+  --primary-electric: #00f5a0;
+  --primary-emerald: #10b981;
+  --primary-hover: #00d88d;
+  --primary-glow: rgba(0, 245, 160, 0.4);
+
+  --accent-cyan: #00d2ff;
+  --accent-cyan-glow: rgba(0, 210, 255, 0.4);
+  --accent-purple: #8b5cf6;
+  --accent-amber: #f59e0b;
+
+  /* Typography */
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-tech: 'Space Grotesk', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: #e2e8f0;
+  background-color: var(--obsidian);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.6;
+  background-color: var(--obsidian);
+  color: #e2e8f0;
+  font-family: var(--font-body);
+}
+
+/* ==========================================================================
+   Cyber Scrollbar with Neon Glow
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030509;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f5a0 0%, #00d2ff 100%);
+  border-radius: 9999px;
+  border: 2px solid #030509;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #34d399 0%, #38bdf8 100%);
+}
+
+/* ==========================================================================
+   Typography Hierarchy & Gradient Accents
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.font-tech {
+  font-family: var(--font-tech);
+}
+
+/* Neon Gradient Typography */
+.gradient-text-electric {
+  background: linear-gradient(135deg, #00f5a0 0%, #00d2ff 60%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #00d2ff 0%, #38bdf8 50%, #00f5a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #00f5a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(135deg, #a855f7 0%, #8b5cf6 50%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-glow-electric {
+  text-shadow: 0 0 20px rgba(0, 245, 160, 0.45);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.45);
+}
+
+/* ==========================================================================
+   High-Tech Grids & Cyber Obsidian Backgrounds
+   ========================================================================== */
+.bg-obsidian-mesh {
+  background-color: var(--obsidian);
+  background-image:
+    radial-gradient(circle at 85% 15%, rgba(0, 245, 160, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 10% 30%, rgba(0, 210, 255, 0.10) 0%, transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 45%);
+  position: relative;
+}
+
+.bg-tech-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.bg-hud-radial {
+  background: radial-gradient(circle at 50% 50%, rgba(11, 19, 34, 0.9) 0%, #060911 100%);
+}
+
+/* Ambient Floating Blur Orbs */
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+  transition: all 1s ease;
+}
+
+.ambient-orb-1 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 245, 160, 0.5) 0%, rgba(16, 185, 129, 0.15) 70%, transparent 100%);
+  top: -80px;
+  left: -100px;
+  animation: orbDrift1 14s ease-in-out infinite alternate;
+}
+
+.ambient-orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.45) 0%, rgba(59, 130, 246, 0.15) 70%, transparent 100%);
+  top: 15%;
+  right: -120px;
+  animation: orbDrift2 18s ease-in-out infinite alternate;
+}
+
+.ambient-orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.35) 0%, rgba(99, 102, 241, 0.1) 70%, transparent 100%);
+  bottom: 5%;
+  left: 30%;
+  animation: orbDrift3 16s ease-in-out infinite alternate;
+}
+
+@keyframes orbDrift1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 30px) scale(1.08); }
+  100% { transform: translate(-30px, 50px) scale(0.95); }
+}
+
+@keyframes orbDrift2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, -40px) scale(1.12); }
+  100% { transform: translate(30px, 40px) scale(0.92); }
+}
+
+@keyframes orbDrift3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(1.05); }
+  100% { transform: translate(-40px, -20px) scale(1.1); }
+}
+
+/* ==========================================================================
+   Header Glassmorphism (Cyber Dark)
+   ========================================================================== */
+.glass-nav-dark {
+  background: rgba(6, 9, 17, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.glass-nav-dark::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent 0%, #00f5a0 30%, #00d2ff 70%, transparent 100%);
+  opacity: 0.8;
+}
+
+/* Navigation Links */
+.nav-link {
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00f5a0, #00d2ff);
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 245, 160, 0.6);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+.nav-link.active {
+  color: #00f5a0;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Cyber Glass Cards & HUD Containers
+   ========================================================================== */
+.cyber-card {
+  background: rgba(15, 28, 48, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 245, 160, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(0, 245, 160, 0.15);
+  transform: translateY(-4px);
+}
+
+.cyber-card-glow {
+  border: 1px solid rgba(0, 245, 160, 0.35);
+  box-shadow: 0 0 30px rgba(0, 245, 160, 0.15), inset 0 0 20px rgba(0, 245, 160, 0.05);
+}
+
+.cyber-card-cyan {
+  border: 1px solid rgba(0, 210, 255, 0.35);
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.15), inset 0 0 20px rgba(0, 210, 255, 0.05);
+}
+
+/* Tech Spec Card Ticker */
+.spec-box {
+  background: rgba(11, 19, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 0.85rem 1rem;
+  transition: all 0.25s ease;
+}
+
+.spec-box:hover {
+  border-color: rgba(0, 245, 160, 0.4);
+  background: rgba(15, 28, 48, 0.9);
+}
+
+/* ==========================================================================
+   Buttons & Interactive Controls
+   ========================================================================== */
+.btn-electric {
+  background: linear-gradient(135deg, #00f5a0 0%, #00d2ff 100%);
+  color: #021a11;
+  font-weight: 800;
+  box-shadow: 0 4px 20px rgba(0, 245, 160, 0.45);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-electric:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 245, 160, 0.6);
+  filter: brightness(1.08);
+}
+
+.btn-cyan {
+  background: linear-gradient(135deg, #00d2ff 0%, #0284c7 100%);
+  color: #021626;
+  font-weight: 800;
+  box-shadow: 0 4px 20px rgba(0, 210, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-cyan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 210, 255, 0.55);
+  filter: brightness(1.08);
+}
+
+.btn-cyber-outline {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-cyber-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 245, 160, 0.6);
+  color: #00f5a0;
+  transform: translateY(-2px);
+}
+
+/* Tech Badges */
+.badge-neon {
+  background: rgba(0, 245, 160, 0.1);
+  border: 1px solid rgba(0, 245, 160, 0.35);
+  color: #00f5a0;
+  font-family: var(--font-tech);
+}
+
+.badge-cyan {
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid rgba(0, 210, 255, 0.35);
+  color: #00d2ff;
+  font-family: var(--font-tech);
+}
+
+.badge-amber {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #fbbf24;
+  font-family: var(--font-tech);
+}
+
+/* ==========================================================================
+   Interactive 3D Stage & Scooter Showcase
+   ========================================================================== */
+.hero-stage {
+  perspective: 1000px;
+}
+
+.scooter-showcase-box {
+  background: radial-gradient(circle at 50% 50%, rgba(15, 28, 48, 0.8) 0%, rgba(6, 9, 17, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 2rem;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scooter-showcase-box:hover {
+  border-color: rgba(0, 245, 160, 0.4);
+  box-shadow: 0 30px 70px -15px rgba(0, 245, 160, 0.2);
+}
+
+.scooter-image-stage {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.scooter-glow-ring {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(65px);
+  pointer-events: none;
+  opacity: 0.45;
+  transition: all 0.5s ease;
+}
+
+/* Interactive Color Dot Buttons */
+.color-dot-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.color-dot-btn:hover {
+  transform: scale(1.25);
+  border-color: #ffffff;
+}
+
+.color-dot-btn.active {
+  transform: scale(1.2);
+  border-color: #ffffff;
+  box-shadow: 0 0 12px currentColor;
+}
+
+/* ==========================================================================
+   Range & Fuel Savings Slider Component
+   ========================================================================== */
+input[type="range"].cyber-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  outline: none;
+  transition: background 0.2s;
+}
+
+input[type="range"].cyber-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #00f5a0;
+  cursor: pointer;
+  border: 3px solid #060911;
+  box-shadow: 0 0 14px rgba(0, 245, 160, 0.8);
+  transition: transform 0.15s ease;
+}
+
+input[type="range"].cyber-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* ==========================================================================
+   Venture Cards (Cyber Stealth Dark)
+   ========================================================================== */
+.card-venture-dark {
+  background: linear-gradient(175deg, rgba(15, 28, 48, 0.8) 0%, rgba(8, 14, 26, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-venture-dark:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 245, 160, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(0, 245, 160, 0.15);
+}
+
+.card-venture-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00f5a0 0%, #00d2ff 100%);
+}
+
+/* ==========================================================================
+   Form Controls & Modal (Cyber Stealth)
+   ========================================================================== */
+.cyber-input {
+  background: rgba(8, 14, 26, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.cyber-input:focus {
+  outline: none;
+  border-color: #00f5a0;
+  box-shadow: 0 0 0 3px rgba(0, 245, 160, 0.2);
+}
+
+.modal-backdrop-dark {
+  background: rgba(3, 5, 9, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Top Announcement bar */
+.bg-announcement-dark {
+  background: linear-gradient(90deg, #030509 0%, #0a171d 40%, #041a12 80%, #030509 100%);
+  border-bottom: 1px solid rgba(0, 245, 160, 0.2);
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .hero-heading {
+    font-size: 2.25rem !important;
+    line-height: 1.12 !important;
+  }
+}
